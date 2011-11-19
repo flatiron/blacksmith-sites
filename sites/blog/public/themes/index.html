@@ -1,0 +1,107 @@
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Blacksmith is a static site generator.">
+  <meta name="keywords" content="node,Node,nodejs,javascript,docs,documentation,how-to,tutorials,nodejitsu">
+  <title> :: How To Write A Theme</title>
+  <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+  <link rel="stylesheet" href="/css/nodedocs.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="/css/highlight/github.css" type="text/css" media="screen">
+  <!--Google analytics-->
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-24971485-4']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+</head>
+<body>
+  <header>
+    <div class="title"><a href="/">Blacksmith</a></div>
+  </header>
+
+  <div id="mask"></div>
+  <nav id="toc"><ul><li><a href="/authors">authors</a></li><li><a href="/page">page</a></li><li><a href="/themes">themes</a></li></ul></nav>
+  <article id="article">
+    <div id="metadata">
+      <h1 class="title">How To Write A Theme</h1>
+      <span class="about">by <strong class="author"><span class="name">nodejitsu</span> <span class="github"></span></strong></span><span class="about"> on <em><time class="date" datetime="2011-11-03T18:55:54.294Z">2011-11-03T18:55:54.294Z</time></em></span>
+      <nav class="breadcrumbs">
+        
+      <a href="/themes" class="breadcrumb">themes</a></nav>
+    </div>
+    <div id="content"><h2>Creating your own themes</h2>
+
+<p>All the HTML in the <code>/example/themes</code> folder is turned into blog pages using <a href="https://github.com/hij1nx/weld">weld</a>! This means that, instead of using typical templating techniques, all you have to do is use CSS element classes for Weld to grab on to!</p>
+
+<h3>article.html</h3>
+
+<p>This is the html file used to build up article pages.</p>
+
+<ul>
+<li>"gravatar": The element containing your gravatar</li>
+<li>"title": The title of the article</li>
+<li>"markdown": The rendered markdown of the article</li>
+<li>"author": Contains information about the author, in the form of a <a href="http://www.w3.org/TR/html401/struct/lists.html">data list</a>
+<ul><li>"aboutAuthorK": Keys in the author listings (ex: "twitter: ")</li>
+<li>"aboutAuthorV": Values in the author listings (ex: "<a href="http://twitter.com/jesusabdullah/">jesusabdullah</a>")</li></ul></li>
+<li>"aboutArticleDL": Contains information about the article, in the form of a data list.
+<ul><li>"aboutArticleK": Keys in the article listings (ex: "Date Released: ")</li>
+<li>"aboutArticleV": Values in the author listings (ex: "Tuesday March 29, 2011")</li></ul></li>
+</ul>
+
+<h3>index.html</h3>
+
+<p>This is the html file used to build the main page of your blog.</p>
+
+<ul>
+<li>"article": Each instance of this div contains an article.
+<ul><li>"title": The title of the article</li>
+<li>"markdown": The rendered markdown of the article</li></ul></li>
+<li>"archiveListItem": Each instance of this element contains a link to one of the blog articles.</li>
+</ul>
+
+<h3>archive.html</h3>
+
+<p>This is the html file used to build the archives page of your blog.</p>
+
+<ul>
+<li>"article": Each instance of this element contains a summarized article.
+<ul><li>"gravatar": The element containing the author's gravatar</li>
+<li>"author": The name of the author</li>
+<li>"date": The date the article was written</li>
+<li>"title": The title of the article</li>
+<li>"markdown": The rendered markdown of the article</li></ul></li>
+</ul></div>
+  </article>
+  <script type="text/javascript" src="/js/jquery.js"></script>
+  <script type="text/javascript" src="/js/index.js"></script>
+  <script type="text/javascript">
+  var _sf_async_config={uid:11119,domain:"docs.nodejitsu.com"};
+  (function(){
+    function loadChartbeat() {
+      window._sf_endpt=(new Date()).getTime();
+      var e = document.createElement('script');
+      e.setAttribute('language', 'javascript');
+      e.setAttribute('type', 'text/javascript');
+      e.setAttribute('src',
+         (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") +
+         "js/chartbeat.js");
+      document.body.appendChild(e);
+    }
+    var oldonload = window.onload;
+    window.onload = (typeof window.onload != 'function') ?
+       loadChartbeat : function() { oldonload(); loadChartbeat(); };
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Blacksmith is a static site generator.">
+  <meta name="keywords" content="node,Node,nodejs,javascript,docs,documentation,how-to,tutorials,nodejitsu">
+  <title> :: How To Make A Page</title>
+  <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+  <link rel="stylesheet" href="/css/nodedocs.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="/css/highlight/github.css" type="text/css" media="screen">
+  <!--Google analytics-->
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-24971485-4']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+</head>
+<body>
+  <header>
+    <div class="title"><a href="/">Blacksmith</a></div>
+  </header>
+
+  <div id="mask"></div>
+  <nav id="toc"><ul><li><a href="/authors">authors</a></li><li><a href="/page">page</a></li><li><a href="/themes">themes</a></li></ul></nav>
+  <article id="article">
+    <div id="metadata">
+      <h1 class="title">How To Make A Page</h1>
+      <span class="about">by <strong class="author"><span class="name">nodejitsu</span> <span class="github"></span></strong></span><span class="about"> on <em><time class="date" datetime="2011-11-03T18:55:54.294Z">2011-11-03T18:55:54.294Z</time></em></span>
+      <nav class="breadcrumbs">
+        
+      <a href="/page" class="breadcrumb">page</a></nav>
+    </div>
+    <div id="content"><p>Each article requires it's own folder in the <code>articles</code> folder with two important files:</p>
+
+<p><code>articles/:my-article/article.md</code><br><code>articles/:my-article/article.json</code></p>
+
+<h3>article.md</h3>
+
+<p>The articles themselves are parsed as <a href="http://github.github.com/github-flavored-markdown/">github-flavored markdown</a>, which is arguably the best markdown dialect around. Just write your article content in this file as markdown and save it.</p>
+
+<p><strong>For example:</strong></p>
+
+<pre><code> <span class="comment">## This is my Blost Post</span>
+ It's **awesome**
+ *Super Awesome*
+</code></pre>
+
+<h3>article.json</h3>
+
+<p>Each article has an associated metadata file found in <code>article.json</code>. </p>
+
+<p><strong>For example:</strong></p>
+
+<pre><code>{
+  "title": "My First Blog Post",
+  "author": "Joshua Holbrook",
+  "date": "Fri Aug 19 17:36:01 PDT 2011"
+}
+</code></pre>
+
+<p>The three important fields are <code>title</code>, <code>author</code> and <code>date</code></p>
+
+<p>Each folder should have the following files in it:</p>
+
+<ul>
+<li>page.json</li>
+<li>content.md</li>
+</ul>
+
+<p><strong>More coming soon!</strong></p></div>
+  </article>
+  <script type="text/javascript" src="/js/jquery.js"></script>
+  <script type="text/javascript" src="/js/index.js"></script>
+  <script type="text/javascript">
+  var _sf_async_config={uid:11119,domain:"docs.nodejitsu.com"};
+  (function(){
+    function loadChartbeat() {
+      window._sf_endpt=(new Date()).getTime();
+      var e = document.createElement('script');
+      e.setAttribute('language', 'javascript');
+      e.setAttribute('type', 'text/javascript');
+      e.setAttribute('src',
+         (("https:" == document.location.protocol) ? "https://a248.e.akamai.net/chartbeat.download.akamai.com/102508/" : "http://static.chartbeat.com/") +
+         "js/chartbeat.js");
+      document.body.appendChild(e);
+    }
+    var oldonload = window.onload;
+    window.onload = (typeof window.onload != 'function') ?
+       loadChartbeat : function() { oldonload(); loadChartbeat(); };
+  })();
+  </script>
+</body>
+</html>

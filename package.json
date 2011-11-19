@@ -1,0 +1,15 @@
+{
+  "author": "Joshua Holbrook <josh@nodejitsu.com>",
+  "name": "blacksmith-sites",
+  "description": "A collection of starter blacksmith sites",
+  "version": "0.0.0",
+  "repository": {
+    "url": ""
+  },
+  "main": "./index",
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

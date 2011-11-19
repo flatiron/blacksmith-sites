@@ -1,0 +1,113 @@
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Blacksmith is a static site generator.">
+    <meta name="keywords" content="blacksmith,cms">
+    <title> :: How To Customize Themes</title>
+    <script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
+    <link rel="stylesheet" href="/css/application.css" type="text/css" media="all">
+    <link rel="stylesheet" href="/css/blacksmith.css" type="text/css">
+
+  </head>
+  <body>
+    <div id="container">
+      <header id="header">
+        <h1 class="title"><a href="/">Blacksmith</a></h1>
+      </header>
+
+      <div id="sidebar">
+        <div id="sidebar-node">
+          <h2>Table of Contents</h2>
+          <nav id="toc"><ul><li><a href="/publish-content">publish content</a></li><li><a href="/manage-authors">manage authors</a></li><li><a href="/customize-themes">customize themes</a></li><li><a href="/all-pages">all pages</a></li><li><a href="/global-config">global config</a></li><li><a href="/how-to-pictures">how to pictures</a></li></ul></nav>
+        </div>
+      </div>
+      <div id="page">
+
+        <article class="article">
+          <div class="metadata">
+            <h1>
+              <span class="title">How To Customize Themes</span>
+              <small>
+                <span class="about">by 
+                  <strong class="author">
+                    <span class="name">Nodejitsu</span>
+                    <span class="github"><a href="https://github.com/nodejitsu">[github]</a></span>
+                  </strong>
+                </span>
+                <span class="about"> on <em><time class="date" datetime="Thu Nov 03 2011 11:55:54 GMT-0700 (PDT)">Thursday, Oct 3 2011</time></em></span>
+              </small>
+            </h1>
+            <div class="breadcrumbs">
+              @: / 
+            <a href="/customize-themes" class="breadcrumb">customize-themes</a></div>
+          </div>
+          <div class="content"><p>All the HTML in the <code>./themes</code> folder is turned into content pages using <a href="https://github.com/hij1nx/weld">weld</a>! This means that, instead of using typical templating techniques, all you have to do is use CSS element classes for Weld to grab onto.</p>
+
+<h2>article.html</h2>
+
+<p>This is the html file used to template "content" pages. Here is a broad overview of article.html's structure:</p>
+
+<h3>weld object:</h3>
+
+<ul>
+<li>"content": This is populated by blacksmith's gfm parser/generator.</li>
+<li>"metadata"
+<ul><li>"title": The title of the article.</li>
+<li>"author": Information about the author of the article.
+<ul><li>"name": The author's name</li>
+<li>"email": The author's email address</li>
+<li>"github": The author's github username</li></ul></li>
+<li>"date": The date on which the article was written.</li>
+<li>"breadcrumb": A list representing the path. This is used to build a "breadcrumb" link.</li></ul></li>
+<li>"toc": This is populated by blacksmith's Table of Contents generator, and is a nested tree of <code>&lt;ul&gt;</code> elements.</li>
+</ul>
+
+<h3>other important html classes:</h3>
+
+<ul>
+<li>".about": This class is used to surround metadata-display elements, such as ".date", so that these elements may be removed if the particular piece of metadata is unspecified. For example:</li>
+</ul>
+
+<blockquote>
+  <p><em>&lt;span class="about"&gt;by &lt;strong class="author"&gt;&lt;span class="name"&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;</em></p>
+</blockquote>
+
+<p>If <code><span class="identifier">author</span>.<span class="identifier"><span class="keymethods">name</span></span></code> does not exist, then the resulting rendering (or lack thereof) leaves behind:</p>
+
+<blockquote>
+  <p><em>by</em></p>
+</blockquote>
+
+<p>Surrounding this block with <em>&lt;span class="about"&gt;&lt;/span&gt;</em> allows for its removal.</p>
+
+<h2>directory.html</h2>
+
+<p>This is the html file used to template directory views, in the case where there is no article at this level. Here is a broad overview of directory.html's structure:</p>
+
+<h3>weld object:</h3>
+
+<ul>
+<li>"pwd": The path to the current directory.</li>
+<li>"ls": A list of the current directory's child directories.</li>
+<li>"metadata"
+<ul><li>"breadcrumb": A list representing the path. This is used to build a "breadcrumb" link.</li></ul></li>
+<li>"toc": This is populated by blacksmith's Table of Contents generator, and is a nested tree of <code>&lt;ul&gt;</code> elements.</li>
+</ul></div>
+        </article>
+
+        <script type="text/javascript" src="/js/jquery.js"></script>
+      </div>
+
+      <footer id="footer">
+        <hr>
+        <p><a href="/">Blacksmith</a></p>
+        <ul>
+          <li>Powered by <a href="http://nodejitsu.com">Nodejitsu</a> / styled with <a href="http://quotedprintable.com/pages/scribbish">scribbish</a></li>
+        </ul>
+      </footer>
+
+
+    </div>
+  </body>
+</html>
