@@ -1,4 +1,5 @@
-var fs = require("fs");
+var fs = require("fs"),
+    alists = require("alists");
 
 module.exports = function (cb) {
 
@@ -10,11 +11,14 @@ module.exports = function (cb) {
     }
 
     try {
-      dirs = dirs.map(function (dir) {
-        return root + '/' + dir;
-      }).filter(function (dir) {
-        return fs.statSync(dir).isDirectory;
-      });
+      dirs = alists.toObj(
+        dirs.filter(function (dir) {
+          return fs.statSync(root + '/' + dir).isDirectory;
+        }).map(function (dir) {
+          return [ dir, root + '/' + dir];
+        })
+      );
+
     }
     catch (err) {
       cb(err);
