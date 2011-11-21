@@ -1,0 +1,19 @@
+{
+  "author": "Joshua Holbrook <josh@nodejitsu.com> (http://jesusabdullah.github.com)",
+  "name": "blacksmith-docsite",
+  "description": "An example docs site for blacksmith",
+  "version": "0.0.0",
+  "homepage": "https://github.com/flatiron/blacksmith",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/flatiron/blacksmith-sites.git"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start": "bin/server"
+  }
+}
