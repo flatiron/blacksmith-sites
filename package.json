@@ -10,6 +10,8 @@
   "engines": {
     "node": "*"
   },
-  "dependencies": {},
+  "dependencies": {
+    "alists": "0.0.x"
+  },
   "devDependencies": {}
 }
