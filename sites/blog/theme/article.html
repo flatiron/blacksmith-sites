@@ -13,50 +13,46 @@
   <body>
     <div id="container">
       <header id="header">
-        <h1 class="title"><a href="/">Blacksmith</a></h1>
+        <h1 class="title"><a href="/">My Awesome Blog</a></h1>
       </header>
-
-      <div id="sidebar">
-        <div id="sidebar-node">
-          <h2>Table of Contents</h2>
-          <nav id="toc"></nav>
-        </div>
-      </div>
-      <div id="page">
-
-        <article class="article">
-          <div class="metadata">
-            <h1>
-              <span class="title"></span>
-              <small>
-                <span class="about">by 
-                  <strong class="author">
-                    <span class="name"></span>
-                    <span class="github"></span>
-                  </strong>
-                </span>
-                <span class="about"> on <em><time class="date"></time></em></span>
-              </small>
-            </h1>
-            <div class="breadcrumbs">
-              @: / <a href="" class="breadcrumb"></a>
-            </div>
+      <div class="metadata">
+        <div id="sidebar" style="margin-bottom: 32px;">
+          <div class="sidebar-node author">
+            <h2>About This Author:</h2>
+            <ul>
+              <li><strong>Name: </strong><span class="name">John Doe</span></li>
+              <li class="if-github"><strong>Github: </strong><span class="github">johnd</span></li>
+              <li class="if-twitter"><strong>Twitter: </strong><span class="twitter">johnd</span></li>
+            </ul>
           </div>
-          <div class="content"></div>
-        </article>
+          <div class="sidebar-node if-date">
+            <h2>Article Publish Date:</h2>
+            <strong class="date"></strong>
+          </div>
+          <div class="sidebar-node if-byThisAuthor">
+            <h2>More Articles By This Author</h2>
+            <nav class="byThisAuthor"></nav>
+          </div>
+        </div>
+        <div id="page">
 
-        <script type="text/javascript" src="/js/jquery.js"></script>
+          <article class="article">
+            <h1 class="title"></h1>
+            <div class="content"></div>
+          </article>
+
+          <script type="text/javascript" src="/js/jquery.js"></script>
+        </div>
+
+        <footer id="footer">
+          <hr />
+          <p><a href="/">Blacksmith</a></p>
+          <ul>
+            <li>Powered by <a href="http://nodejitsu.com">Nodejitsu</a> / styled with <a href="http://quotedprintable.com/pages/scribbish">scribbish</a></li>
+          </ul>
+        </footer>
+
       </div>
-
-      <footer id="footer">
-        <hr />
-        <p><a href="/">Blacksmith</a></p>
-        <ul>
-          <li>Powered by <a href="http://nodejitsu.com">Nodejitsu</a> / styled with <a href="http://quotedprintable.com/pages/scribbish">scribbish</a></li>
-        </ul>
-      </footer>
-
-
     </div>
   </body>
 </html>

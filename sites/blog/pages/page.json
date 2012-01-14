@@ -1,4 +1,10 @@
 {
-  "render": "all",
-  "preview": true
+  "render": "archive",
+  "preview": true,
+  "theme": "./frontpage.html",
+  "index": false,
+  "toc": {
+    "length": 20
+  },
+  "pageLimit": 10
 }
