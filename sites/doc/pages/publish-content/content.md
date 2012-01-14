@@ -1,7 +1,7 @@
 Each page requires it's own folder in the `./pages` directory with two important files:
 
-`./pages/:my-article/content.md`
-`./pages/:my-page/page.json`
+* `./pages/:my-page/content.md`
+* `./pages/:my-page/page.json`
 
 ### content.md
 

@@ -19,15 +19,18 @@ This is the html file used to template "content" pages. Here is a broad overview
 
 ### other important html classes:
 
-* ".about": This class is used to surround metadata-display elements, such as ".date", so that these elements may be removed if the particular piece of metadata is unspecified. For example:
+* "if-<tag>": This family of classes is used to show content only if `<tag>` is defined. For example:
 
-> *&lt;span class="about"&gt;by &lt;strong class="author"&gt;&lt;span class="name"&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;*
+> *&lt;span class="if-name"&gt;by &lt;strong class="author"&gt;&lt;span class="name"&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/span&gt;*
 
-If `author.name` does not exist, then the resulting rendering (or lack thereof) leaves behind:
+If `author.name` does not exist, then the resulting rendering (or lack thereof) would otherwise leave behind:
 
 > *by*
 
-Surrounding this block with *&lt;span class="about"&gt;&lt;/span&gt;* allows for its removal.
+Surrounding this block with *&lt;span class="if-name"&gt;&lt;/span&gt;* allows for its removal.
+
+* "if-not-<tag>": This family of classes is used to remove content if `<tag>` is undefined.
+
 
 
 ## directory.html
