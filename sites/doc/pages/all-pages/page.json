@@ -1,4 +1,4 @@
 {
-  "render": "all",
-  "preview": true
+  "render": "archive",
+  "index": false
 }
