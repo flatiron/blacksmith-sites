@@ -1,10 +1,11 @@
 {
-  "author": "Joshua Holbrook <josh@nodejitsu.com>",
+  "author": "Nodejitsu <info@nodejitsu.com>",
   "name": "blacksmith-sites",
   "description": "A collection of starter blacksmith sites",
   "version": "0.0.0",
   "repository": {
-    "url": ""
+    "type": "git",
+    "url": "git://github.com/flatiron/blacksmith-sites.git"
   },
   "main": "./index",
   "engines": {
