@@ -1,6 +1,10 @@
 {
+  "title": "My Awesome Blog",
+  "url": "my.blog.local",
+  "author": "Me",
+  "description": "My awesome blog!",
   "tags": [
-    "blacksmith",
-    "cms"
+    "awesome",
+    "blog"
   ]
 }
