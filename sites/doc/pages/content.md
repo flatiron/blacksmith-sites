@@ -11,40 +11,47 @@ Static sites are generated using Weld and JSDOM. Blacksmith also ships with a bu
 
  * Easy to use
  * Can be hosted anywhere, since it generates static HTML/CSS
- * Write and Edit articles on the file system using Github Flavored Markdown
+ * Write and Edit articles on the file system using markdown
  * JSDOM / Weld based
  * Easily create custom themes using plain HTML and CSS ( no micro-templating ! )
- * Default template is a port of [scribbish](http://quotedprintable.com/pages/scribbish) by [Jeffrey Allan Hardy](http://quotedprintable.com/)
  * Ships with a robust node.js static server suitable for production
 
-## Installation
+## Installing Blacksmith
 
-    git clone https://github.com/nodejitsu/blacksmith.git 
-    cd blacksmith
-    
+    npm install blacksmith -g
+
 ## Usage
 
-Now that you have cloned your own copy of Blacksmith, getting started is easy!
+Now that you have blacksmith, you can use the cli tool to get started!
 
-### Generating a new static site
+### Create a new site
 
-    node bin/blacksmith generate
+    blacksmith init
+
+### Create a new page
+
+    cd myBlog/pages
+    blacksmith post
+
+### Generate a static site
 
 *This command will generate a new version of your blog using source files from the `./pages` folder and put the generated content into `./public/`.*
+
+    # In your site's root
+    blacksmith generate
     
 ### Serving your static site
 
-Now simply drop `./public` into any public HTTP server and your site is good to go!
+You can serve what's in `./public` on any static HTTP server and it's good to go!
 
-If you need a HTTP server, just use Blacksmith's built-in Node.js HTTP server with:
+Alternately, blacksmith comes with a simple http server:
 
-    node bin/blacksmith serve
-   
-*This command will start up a static http server that will serve the contents of `./pages`.*
+    blacksmith preview
 
+and can be deployed to Nodejitsu as-is:
+
+    jitsu deploy
 
 # Want to learn more?
 
-The documentation for blacksmith is hosted as a blacksmith site. If you're reading this, all you have to do is click the links in the Table of Contents in the sidebar!
-
-#### Author: Nodejitsu Inc.
+Check out the links in the sidebar!
