@@ -9,10 +9,13 @@
     "url": "git://github.com/flatiron/blacksmith-sites.git"
   },
   "engines": {
-    "node": "*"
+    "node": "0.6.x"
   },
-  "dependencies": {},
+  "dependencies": {
+    "http-server": "0.2.9"
+  },
   "devDependencies": {},
+  "analyze": false,
   "scripts": {
     "start": "bin/server"
   }
