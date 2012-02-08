@@ -11,8 +11,9 @@
   "engines": {
     "node": "*"
   },
-  "dependencies": {},
-  "devDependencies": {},
+  "dependencies": {
+    "http-server": "0.2.9"
+  },
   "scripts": {
     "start": "bin/server"
   }

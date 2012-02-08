@@ -1,8 +1,9 @@
 {
   "author": "Nodejitsu <support@nodejitsu.com> (http://blacksmith.jit.su)",
   "name": "blacksmith-docsite",
+  "subdomain": "blacksmith",
   "description": "A docs site for blacksmith",
-  "version": "0.0.1",
+  "version": "0.0.1-5",
   "homepage": "https://github.com/flatiron/blacksmith",
   "repository": {
     "type": "git",
