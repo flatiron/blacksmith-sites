@@ -1,6 +1,9 @@
 {
+  "title": "Blacksmith",
+  "url": "blacksmith.jit.su",
+  "author": "nodejitsu",
+  "description": "Documentation site for Blacksmith",
   "tags": [
-    "blacksmith",
-    "cms"
+    "blacksmith"
   ]
 }
