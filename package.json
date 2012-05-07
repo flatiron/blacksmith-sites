@@ -1,8 +1,11 @@
 {
-  "author": "Nodejitsu <info@nodejitsu.com>",
+  "author": "Nodejitsu Inc. <info@nodejitsu.com>",
   "name": "blacksmith-sites",
   "description": "A collection of starter blacksmith sites",
   "version": "0.0.3",
+  "maintainers": [
+    "jesusabdullah <josh@nodejitsu.com>"
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/flatiron/blacksmith-sites.git"
@@ -16,3 +19,4 @@
   },
   "devDependencies": {}
 }
+
