@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/flatiron/blacksmith-sites.png)](http://travis-ci.org/flatiron/blacksmith-sites)
 # Blacksmith-sites
 
 ## Example:
